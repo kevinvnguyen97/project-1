@@ -1,0 +1,32 @@
+body {
+    background-color: #4b4c4c;
+    color: white;
+}
+nav {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #303030;
+}
+.container {
+    padding-top: 20px;
+}
+.row {
+    text-align: center;
+}
+
+.s6 {
+    text-align: left;
+}
+
+input {
+    border: 2px solid #67c0f7 !important;
+    color: white;
+}
+
+#search {
+    position: relative;
+}
+
+label {
+    color: #67c0f7;
+}
