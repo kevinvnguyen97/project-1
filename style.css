@@ -41,6 +41,12 @@ nav {
 .fa {
     color: white;
 }
+.vl {
+    border-left: 6px solid white; 
+    height: 200px; 
+    position:absolute; 
+    left: 50%; 
+}
 
 .fa:hover {
     color: #67c0f7;
@@ -69,3 +75,4 @@ nav {
 .btn-flat:hover {
     background-color: transparent;;
 } 
+
