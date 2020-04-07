@@ -1,6 +1,7 @@
 body {
     background-color: #4b4c4c;
     color: white;
+    font-family: 'Barlow', sans-serif;
 }
 nav {
     padding-left: 30px;
@@ -8,29 +9,37 @@ nav {
     background-color: #303030;
 }
 .container {
-    padding-top: 20px;
+    padding-top: 30px;
 }
+
 .row {
     text-align: center;
 }
 
-.s6 {
+#landing-description {
     text-align: left;
 }
 
-input {
-    border: 2px solid #67c0f7 !important;
+#search-input{
+    font-family: 'Barlow', sans-serif;
+    border-bottom-color: #67c0f7 !important;
+    color: white;
+    padding-left: 10px;
+}
+
+.search-box {
+    margin-top: 70px;
+}
+
+.fa {
     color: white;
 }
 
-#search {
-    position: relative;
-}
-
-label {
+.fa:hover {
     color: #67c0f7;
 }
 
+<<<<<<< HEAD
 #main-pic {
     margin-left: 20%; 
 } 
@@ -50,3 +59,12 @@ label {
     height: 500px;
    }
 
+=======
+/* .btn-flat {
+    background-color: #67c0f7;
+} */
+
+.btn-flat:hover {
+    background-color: transparent;;
+} 
+>>>>>>> master
