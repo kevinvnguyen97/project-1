@@ -39,6 +39,25 @@ nav {
     color: #67c0f7;
 }
 
+#main-pic {
+    margin-left: 20%; 
+} 
+
+#description-header {
+    font-size: 18px; 
+    text-align: left; 
+}
+
+#description-body {
+    font-size: 12px; 
+    text-align: left; 
+}
+
+.vl {
+    border-left: 6px solid green;
+    height: 500px;
+   }
+
 /* .btn-flat {
     background-color: #67c0f7;
 } */
