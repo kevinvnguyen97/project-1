@@ -3,6 +3,13 @@ body {
     color: white;
     font-family: 'Barlow', sans-serif;
 }
+
+#line {
+    background-color: white; 
+    width: 5px; 
+    height: 500px;
+   }
+
 nav {
     padding-left: 30px;
     padding-right: 30px;
@@ -34,13 +41,20 @@ nav {
 .fa {
     color: white;
 }
+.vl {
+    border-left: 6px solid white; 
+    height: 200px; 
+    position:absolute; 
+    left: 50%; 
+}
 
 .fa:hover {
     color: #67c0f7;
 }
 
-#main-pic {
-    margin-left: 20%; 
+#main-pic { 
+    text-align: left; 
+    margin-left: 0px; 
 } 
 
 #description-header {
@@ -53,10 +67,6 @@ nav {
     text-align: left; 
 }
 
-.vl {
-    border-left: 6px solid green;
-    height: 500px;
-   }
 
 /* .btn-flat {
     background-color: #67c0f7;
@@ -65,3 +75,4 @@ nav {
 .btn-flat:hover {
     background-color: transparent;;
 } 
+
