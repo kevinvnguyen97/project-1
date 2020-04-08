@@ -1,29 +1,3 @@
-//Game API, queryURL 
-var cors = "https://cors-anywhere.herokuapp.com/";
-var queryURL = "https://api-v3.igdb.com/games/?search=";
-var gameName = "";
-
-//Game search & key for game names 
-$('#search-button').on("click", function() {
-    gameName = $("#gsearch").val().trim();
-    console.log(gameName);
-
-    var newURL = "https://api-v3.igdb.com/games/?search=" + gameName + "&fields=id,name,cover,platforms,genres,summary&limit=1";
-
-    $.ajax({
-        url: cors + newURL,//cors + queryURL + gameName,
-        headers: {
-            "user-key": "723e84ca4cb5bdd0d87cfb9d7e245b76"
-        },
-        method: "GET"
-    }).then(function(response) {
-        console.log(response);
-        //var gameText = $("#game").text(JSON.stringify(response));
-        //console.log(gameText);
-        //$("#game").append(gameText);
-    });
-});
-
 //PSEUDO CODE FOR MEME BUTTON  
     //*When you click the related meme button 
             //create an onclick event that triggers, visability and connects to game name API data, as well as new button to download the related memes 
@@ -37,5 +11,34 @@ $('#search-button').on("click", function() {
     
 
 //Meme API & queryURL 
-var memes = ;
-var memesqueryURL = ;
+//api key for Giphy: 0AiaHLMFWwB2ItqPXky2ZMxPWnWy55HK
+var giphy = "https://developers.giphy.com/docs/api";
+var memesqueryURL = "http://api.giphy.com/v1/gifs/categories="; 
+var gameMemes ;
+
+$('#meme-btn').on("click", function() {
+    gameMemes = $("#meme-btn").val().trim();
+    console.log("This button is being clicked on")
+    console.log(gameMemes);
+
+    var newGiphyURL = "http://api.giphy.com/v1/gifs/categories=" + gameMeme+ "&0AiaHLMFWwB2ItqPXky2ZMxPWnWy55HK";
+
+    $.ajax({
+        url: giphy + newGiphyURL, 
+        headers: {
+            "user-key": "0AiaHLMFWwB2ItqPXky2ZMxPWnWy55HK"
+        },
+        method: "GET"
+    }).then(function(response) {
+        console.log(response);
+
+//if button is clicked then display memes by adding a row between button & suggested games 
+
+display function(){
+    if ($('#meme-btn').on("click", function()){
+        //display all related memes 
+    }
+    else{
+        //display error message 
+    }
+}
