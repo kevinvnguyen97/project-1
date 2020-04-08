@@ -3,6 +3,13 @@ body {
     color: white;
     font-family: 'Barlow', sans-serif;
 }
+
+#line {
+    background-color: white; 
+    width: 5px; 
+    height: 500px;
+   }
+
 nav {
     padding-left: 30px;
     padding-right: 30px;
@@ -45,11 +52,12 @@ nav {
     color: #67c0f7;
 }
 
-#main-pic {
-    margin-left: 20%; 
+#main-pic { 
+    text-align: left; 
+    margin-left: 0px; 
 } 
 
-#description-header {
+.title-section {
     font-size: 18px; 
     text-align: left; 
 }
@@ -59,16 +67,19 @@ nav {
     text-align: left; 
 }
 
-.vl {
-    border-left: 6px solid green;
-    height: 500px;
-   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 /* .btn-flat {
     background-color: #67c0f7;
 } */
 
 .btn-flat:hover {
     background-color: transparent;;
+<<<<<<< HEAD
+} 
+=======
 } 
 
+>>>>>>> master
