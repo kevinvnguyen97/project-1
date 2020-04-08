@@ -1,4 +1,5 @@
 var a=localStorage.getItem("info");
+<<<<<<< HEAD
 a = JSON.parse(a);
 
 // Game image
@@ -68,6 +69,17 @@ for (var i = 0; i < a[0].involved_companies.length; i++) {
 
 //Game Description
 var description = a[0].summary;
+=======
+a = JSON.parse(a)
+
+//Game Title//
+var title = a[0].name
+$("#title").empty();
+$("#title").append(title);
+
+//Game Description//
+var description = a[0].summary
+>>>>>>> master
 $("#description-body").empty();
 $("#description-body").append(description);
 
