@@ -68,3 +68,24 @@ h4 {
 .btn:hover {
     background-color: #3498d6;
 }
+
+/* Mobile Responsive */
+
+@media only screen and (max-width: 600px) {
+    #game-image-input {
+        border: none;
+    }
+
+    #main-pic { 
+        padding-right: 0px; 
+    }
+
+    .game-summary {
+        margin-left: 5px;
+    }
+
+    #related-gif {
+        width: 100%;
+    }
+    
+}
