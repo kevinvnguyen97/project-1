@@ -3,8 +3,8 @@ var queryURL = "https://api-v3.igdb.com/games/?search=";
 var gameName = "";
 //queryURL = apiURL + key;
 
-$('#search-button').on("click", function() {
-    gameName = $("#gsearch").val().trim();
+$('.btn').on("click", function() {
+    gameName = $("#search-input").val().trim();
     console.log(gameName);
 
     var newURL = "https://api-v3.igdb.com/games/?search=" + gameName + "&fields=id,name,cover,platforms,genres,summary&limit=1";
@@ -17,6 +17,9 @@ $('#search-button').on("click", function() {
         method: "GET"
     }).then(function(response) {
         console.log(response);
+        console.log(response[0].name);
+        console.log(response[0].summary);
+        //console.log("Description: " + response.)
         //var gameText = $("#game").text(JSON.stringify(response));
         //console.log(gameText);
         //$("#game").append(gameText);
