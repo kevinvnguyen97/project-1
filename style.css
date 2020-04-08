@@ -24,10 +24,6 @@ nav {
     text-align: center;
 }
 
-#landing-description {
-    text-align: left;
-}
-
 #search-input{
     font-family: 'Barlow', sans-serif;
     border-bottom-color: #67c0f7 !important;
@@ -57,8 +53,9 @@ nav {
     text-align: left; 
 }
 
-#description-body {
-    font-size: 12px; 
+h6 {
+    font-size: 16px; 
+    line-height: 22px;
     text-align: left; 
 }
 
