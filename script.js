@@ -18,10 +18,17 @@ $('.btn').on("click", function(event) {
         },
         method: "GET"
     }).then(function(gameResponse) {
-        //console.log(gameResponse);
-        //console.log(gameResponse[0].name);
-        //console.log(gameResponse[0].summary);
+        localStorage.setItem("info", JSON.stringify(gameResponse));
+        var a = localStorage.getItem("info");
+        a = JSON.parse(a);
+        console.log("Saved name " + a[0].name);
 
-        localStorage.setItem(gameResponse);
+        console.log(gameResponse);
+        console.log(gameResponse[0].name);
+        console.log(gameResponse[0].summary);
+        //.setItem("game", JSON.stringify(gameResponse));
+        //console.log(localStorage.getItem("game"));
+        //var savedGameDate = JSON.parse(localStorage.getItem("game"));
+        //console.log(savedGameDate);
     });
 });
