@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stat Quest</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="internal.css">
 </head>
 
 <body>
@@ -27,26 +27,29 @@
         <!--row 1-->
         <div class="row">
             <div id="game-image-input" class="col s6">
-                <img id="main-pic" src="https://picsum.photos/200/300" class="responsive-img">
+                <img id="main-pic" src="https://picsum.photos/400/250" class="responsive-img">
                 <!-- <div id="space" class="col s6"></div> -->
             </div>
-            <div class="col s1" style= "text-align: center;">
-                <div id=“line” style= "background-color: white; 
+            <!-- <div class="col s1" style= "text-align: center;">
+                <div id=“line” style= "background-color: #67c0f7; 
                 width: 3px; height: 300px;"></div>
-                </div>
+                </div> -->
             <div class="col s5" style="text-align: left;">
-                <ul>
-                    <li>Description:</li>
-                    <li>Developer:</li>
-                    <li>Year:</li>
-                    <li>Fun Facts:</li>
-                  </ul>
+                <ul class="game-summary">
+                    <h4 id="title"></h4>
+                    <li class="subtitle">Genre:</li>
+                    <li class="subtitle">Mode:</li>
+                    <li class="subtitle">Year:</li>
+                    <li class="subtitle">Platform:</li>
+                    <li class="subtitle">Developer:</li>
+                    <!-- <li>Fun Facts:</li> -->
+                </ul>
             </div>
             </div>
             <!--row 2-->
             <div class="row">
                 <div id="description-input" class="col s12">
-                    <h3 class="title-section">Description</h3>
+                    <h3 class="section-title">Description</h3>
                     <h4 id="description-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae qui sunt maxime
                         voluptates optio reiciendis numquam facere fugiat, odit culpa dolore, perspiciatis explicabo
                         exercitationem distinctio dolorum ad hic! Praesentium culpa recusandae exercitationem ex, dolore
@@ -66,18 +69,18 @@
             </div>
             <div class="row">
                 <div id=meme-btn class="col s3">
-                    <button type="button">Related Gifs</button>
+                    <a class="waves-effect waves-light btn">See Related Gifs</a>
                 </div>
                 <div id="space" class="col s9"></div>
             </div>
             <!--row 4-->
             <div class="row">
                 <div id=related-games class="col s12">
-                    <h3 class="title-section">Related Games:</h3>
+                    <h3 class="section-title">Suggested Games:</h3>
                 </div>
             </div>
             <!--row 5-->
-                <div class="row">
+                <div class="row related-game">
                     <div class="col s4">
                         <img id="related-game-image-input1" src="https://picsum.photos/200/300" class="responsive-img">
                     </div>
@@ -90,6 +93,8 @@
                 </div>
         </div>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="./script.js"></script>
 </body>
 
 </html>
