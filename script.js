@@ -29,7 +29,8 @@ $('.btn').on("click", function(event) {
 
         //Setting to Local Storage//
         localStorage.setItem("info", JSON.stringify(gameResponse));
-        console.log(gameResponse[0].name);
+        // console.log(gameResponse);
+        // console.log(gameResponse[0].name);
         location.href = 'interal_page.html';
     });
 });
