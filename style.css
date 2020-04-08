@@ -39,11 +39,22 @@ nav {
     color: #67c0f7;
 }
 
+/* .btn-flat {
+    background-color: #67c0f7;
+} */
+
+.btn-flat:hover {
+    background-color: transparent;;
+} 
+
+
+/* Start of Internal CSS */
+
 #main-pic {
     margin-left: 20%; 
 } 
 
-#description-header {
+.section-title {
     font-size: 18px; 
     text-align: left; 
 }
@@ -58,10 +69,8 @@ nav {
     height: 500px;
    }
 
-/* .btn-flat {
-    background-color: #67c0f7;
-} */
+ul {
+    text-align: left;
+}
 
-.btn-flat:hover {
-    background-color: transparent;;
-} 
+
