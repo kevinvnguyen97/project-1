@@ -7,7 +7,7 @@ var gameName = "";
 $('.btn').on("click", function(event) {
     event.preventDefault();
     gameName = $("#search-input").val().trim();
-    console.log(gameName);
+    // console.log(gameName);
 
     gameQueryURL = "https://api-v3.igdb.com/games/?search=" + gameName + "&fields=id,name,cover,platforms,genres,summary&limit=1";
 
@@ -22,6 +22,16 @@ $('.btn').on("click", function(event) {
         //console.log(gameResponse[0].name);
         //console.log(gameResponse[0].summary);
 
-        localStorage.setItem(gameResponse);
+        //console.log("Description: " + response.)
+        //var gameText = $("#game").text(JSON.stringify(response));
+        //console.log(gameText);
+        //$("#game").append(gameText);
+
+        //Setting to Local Storage//
+        localStorage.setItem("info", JSON.stringify(gameResponse));
+        // console.log(gameResponse);
+        // console.log(gameResponse[0].name);
+
+        location.href = 'interal_page.html';
     });
 });
