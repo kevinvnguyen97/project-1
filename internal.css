@@ -1,0 +1,70 @@
+body {
+    background-color: #4b4c4c;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+}
+
+nav {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #303030;
+}
+
+.container {
+    margin-top: 4rem;
+}
+
+#game-image-input {
+    border-right: 3px solid #67c0f7 ;
+}
+
+#main-pic {
+    margin-left: 20%; 
+    text-align: left; 
+    margin-left: 0px;
+    width: 100%;  
+    padding-right: 40px; 
+} 
+
+.section-title {
+    font-size: 20px; 
+    text-align: left; 
+    margin-top: 3rem;
+    font-weight: 400;
+}
+
+#description-body {
+    font-size: 14px; 
+    line-height: 20px;
+    text-align: left; 
+}
+
+.related-game {
+    margin-bottom: 5rem;
+}
+
+h4 {
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.game-summary {
+    text-align: left;
+    margin-top: 0px;
+    margin-left: 40px;
+    line-height: 30px;
+}
+
+.subtitle {
+    font-weight: 400;
+}
+
+.btn {
+    background-color: #67c0f7;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #3498d6;
+}

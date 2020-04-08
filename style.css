@@ -3,13 +3,21 @@ body {
     color: white;
     font-family: 'Barlow', sans-serif;
 }
+
+#line {
+    background-color: white; 
+    width: 5px; 
+    height: 500px;
+   }
+
 nav {
     padding-left: 30px;
     padding-right: 30px;
     background-color: #303030;
 }
+
 .container {
-    padding-top: 30px;
+    margin-top: 4rem;
 }
 
 .row {
@@ -47,30 +55,5 @@ nav {
     background-color: transparent;;
 } 
 
-
-/* Start of Internal CSS */
-
-#main-pic {
-    margin-left: 20%; 
-} 
-
-.section-title {
-    font-size: 18px; 
-    text-align: left; 
-}
-
-#description-body {
-    font-size: 12px; 
-    text-align: left; 
-}
-
-.vl {
-    border-left: 6px solid green;
-    height: 500px;
-   }
-
-ul {
-    text-align: left;
-}
 
 
