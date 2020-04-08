@@ -31,6 +31,7 @@ $('.btn').on("click", function(event) {
         localStorage.setItem("info", JSON.stringify(gameResponse));
         // console.log(gameResponse);
         // console.log(gameResponse[0].name);
+
         location.href = 'interal_page.html';
     });
 });
