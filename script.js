@@ -27,5 +27,10 @@ $('.btn').on("click", function() {
         //var gameText = $("#game").text(JSON.stringify(response));
         //console.log(gameText);
         //$("#game").append(gameText);
+
+        //Start of Yna Code//
+        var gameTitle=$("<h4>").text(gameResponse[0].name);
+        $("#title").empty();
+        $("#title").append(gameTitle);
     });
 });
