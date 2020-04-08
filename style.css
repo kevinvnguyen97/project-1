@@ -47,13 +47,24 @@ nav {
     color: #67c0f7;
 }
 
+#main-pic { 
+    text-align: left; 
+    margin-left: 0px; 
+} 
+
+.title-section {
+    font-size: 18px; 
+    text-align: left; 
+}
+
+#description-body {
+    font-size: 12px; 
+    text-align: left; 
+}
+
 /* .btn-flat {
     background-color: #67c0f7;
 } */
 
 .btn-flat:hover {
     background-color: transparent;;
-} 
-
-
-
