@@ -23,13 +23,6 @@ $('#meme-btn').on("click", function () {
     console.log(gameMemes);
     gameMemes = JSON.parse(gameMemes); 
     console.log(gameMemes);
-    
-//anything left of the domain is the subdomain 
-//what's important with an API is the subdirectories which is anything after the /
-// 
-// subdomain.domain.com/?queryparameter=asdf&secondqueryparameter=asdfasdf
-
-// api.giphy.com/v1/gifs/search?api_key=0AiaHLMFWwB2ItqPXky2ZMxPWnWy55HK&q=overwatch 
 
     var gameMeme = gameMemes[0].name;
     var apiKey= "0AiaHLMFWwB2ItqPXky2ZMxPWnWy55HK";
@@ -45,7 +38,16 @@ $('#meme-btn').on("click", function () {
     }).then(function (response) {
         console.log(response);
     });
+
+    //accept array with memes 
+   randomMemes function (meme) {
+    for (i=0; i=gameMeme.length; i++){
+        var meme= meme[i]
+        return Math.floor(Math.random() * Math.floor(max));
+    }
 });
+
+
         // if button is clicked then display memes by adding a row between button & suggested games 
 
     //     display function(){
