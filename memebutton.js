@@ -39,12 +39,13 @@ $('#meme-btn').on("click", function (event) {
     }).then(function (response) {
         console.log(response);
         for (i = 0; i < response.data.length; i++) {
-            if (i !== 11) {
+            if (i >= 11) {
                 // break;
                 // gifURL.append(data[i].url) 
-                var a = $("<img>").attr("src", response.data[i].url)
+                var gifLink = "https://media.giphy.com/media/" + response.data[i].id + "/giphy.gif"
+                var a = $("<img>").attr("src", gifLink)
                 $("#memes").append(a);
-                console.log(response.data[i].url);
+                console.log(response.data[i].id);
             // } else {
                 // gifURL.append(data[i].url) 
                 // var a = $("<img>").attr("src", response.data[i].url)

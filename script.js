@@ -8,7 +8,7 @@ var gameName = "";
 
 $('.btn').on("click", function(event) {
     event.preventDefault();
-    gameName = $("#search-input").val();
+    gameName = $("#search-input").val().trim();
     
     // Fields
     // id - game ID
@@ -20,6 +20,8 @@ $('.btn').on("click", function(event) {
     // platforms.abbreviation - abbreviated names of platforms
     // genres.name - names of genres
     // summary - description of game
+
+    // USE EXPANDER
     gameQueryURL = "https://api-v3.igdb.com/games/?search=" + gameName + "&fields=id,name,cover.url,game_modes.name,involved_companies.company.name,platforms.abbreviation,genres.name,summary&limit=1";
 
     $.ajax({
@@ -32,5 +34,7 @@ $('.btn').on("click", function(event) {
         console.log(gameResponse);
         localStorage.setItem("info", JSON.stringify(gameResponse));
         location.href = 'interal_page.html';
+    }).catch(function(error) {
+        console.log(error);
     });
 });
