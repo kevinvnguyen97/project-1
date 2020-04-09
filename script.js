@@ -14,7 +14,7 @@ $('.btn').on("click", function(event) {
     // id - game ID
     // name - game name
     // cover.url - image of cover
-    // date - date of release (must convert from timestamp to date using .toDateString())
+    // release_dates.human - year of release
     // game_modes.name - list of game modes
     // involved_companies.company.name - names of the companies/developers
     // platforms.abbreviation - abbreviated names of platforms
@@ -22,7 +22,7 @@ $('.btn').on("click", function(event) {
     // summary - description of game
 
     // USE EXPANDER
-    gameQueryURL = "https://api-v3.igdb.com/games/?search=" + gameName + "&fields=id,name,cover.url,game_modes.name,involved_companies.company.name,platforms.abbreviation,genres.name,summary";
+    gameQueryURL = "https://api-v3.igdb.com/games/?search=" + gameName + "&fields=id,name,release_dates.human,cover.url,game_modes.name,involved_companies.company.name,platforms.abbreviation,genres.name,summary";
     // &limit=1
 
     $.ajax({

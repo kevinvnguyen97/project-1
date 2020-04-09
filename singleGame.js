@@ -38,11 +38,9 @@ for (var i = 0; i < a[0].game_modes.length; i++) {
 }
 
 // Game year
-//$("#year").empty();
-//var unixDate = new Date(a[0].date);
-//console.log(unixDate);
-//var utcString = unixDate.toUTCString();
-//console.log(utcString);
+$("#year").empty();
+var year = a[0].release_dates[0].human.substring(0, 4);
+$("#year").append(year);
 
 // Game platform
 $("#platform").empty();
