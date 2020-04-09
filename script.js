@@ -30,21 +30,6 @@ $('.btn').on("click", function(event) {
     }).then(function(gameResponse) {
         //console.log(gameResponse);
         localStorage.setItem("info", JSON.stringify(gameResponse));
-        console.log(localStorage.getItem("info"));
-        //var a = localStorage.getItem("info");
-        //a = JSON.parse(a);
-        //console.log("Saved name " + a[0].name);
-
-        //console.log("Description: " + response.)
-        //var gameText = $("#game").text(JSON.stringify(response));
-        //console.log(gameText);
-        //$("#game").append(gameText);
-
-        //Setting to Local Storage//
-        //localStorage.setItem("info", JSON.stringify(gameResponse));
-        // console.log(gameResponse);
-        // console.log(gameResponse[0].name);
-
         location.href = 'interal_page.html';
     });
 });
