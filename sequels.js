@@ -1,15 +1,18 @@
-var cors = "https://cors-anywhere.herokuapp.com/";
-var gameQueryURL = "https://api-v3.igdb.com/games/?search=";
-var gameImageURL = "https://images.igdb.com/igdb/image/upload/t_logo_med/";
-var gameName = "";
-//localStorage.clear();
+var a = localStorage.getItem("info");
+a = JSON.parse(a);
+console.log(a);
 
-//queryURL = apiURL + key;
-
-$('.btn').on("click", function(event) {
+for (i = 0; i < a.length; i++){
+    var gameImage = "https:" + a[i].cover.url;
+    var highResImage = gameImage.replace("t_thumb", "t_720p");
+    console.log(highResImage)
+    $("#related-game-image-input" + (i + 1)).attr("src", highResImage)
+    //$("#related-game-image-input" + (i + 1)).append(a);
+    console.log('i: ' + i + ', image added');
+}
+$('.related-game').on("click", function (event) {
     event.preventDefault();
-    gameName = $("#search-input").val().trim();
-    
+
     // Fields
     // id - game ID
     // name - game name
@@ -23,7 +26,6 @@ $('.btn').on("click", function(event) {
 
     // USE EXPANDER
     gameQueryURL = "https://api-v3.igdb.com/games/?search=" + gameName + "&fields=id,name,cover.url,game_modes.name,involved_companies.company.name,platforms.abbreviation,genres.name,summary";
-    // &limit=1
 
     $.ajax({
         url: cors + gameQueryURL,//cors + queryURL + gameName,
@@ -31,11 +33,10 @@ $('.btn').on("click", function(event) {
             "user-key": "0cc1bfecc2736937e59cd1a85bf85210"
         },
         method: "POST"
-    }).then(function(gameResponse) {
+    }).then(function (gameResponse) {
         console.log(gameResponse);
-        localStorage.setItem("info", JSON.stringify(gameResponse));
-        location.href = 'interal_page.html';
-    }).catch(function(error) {
+        localStorage.setItem("infos", JSON.stringify(gameResponse));
+    }).catch(function (error) {
         console.log(error);
     });
 });
