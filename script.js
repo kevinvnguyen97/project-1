@@ -9,7 +9,6 @@ var gameName = "";
 $('.btn').on("click", function(event) {
     //event.preventDefault();
     gameName = $("#search-input").val().trim();
-<<<<<<< HEAD
     
     // Fields
     // id - game ID
@@ -22,11 +21,6 @@ $('.btn').on("click", function(event) {
     // genres.name - names of genres
     // summary - description of game
     gameQueryURL = "https://api-v3.igdb.com/games/?search=" + gameName + "&fields=id,name,date,cover.url,game_modes.name,involved_companies.company.name,platforms.abbreviation,genres.name,summary &limit=1";
-=======
-    // console.log(gameName);
-
-    gameQueryURL = "https://api-v3.igdb.com/games/?search=" + gameName + "&fields=id,name,cover,platforms,genres,summary&limit=1";
->>>>>>> master
 
     $.ajax({
         url: cors + gameQueryURL,//cors + queryURL + gameName,
@@ -38,23 +32,6 @@ $('.btn').on("click", function(event) {
         //console.log(gameResponse);
         localStorage.clear();
         localStorage.setItem("info", JSON.stringify(gameResponse));
-<<<<<<< HEAD
-=======
-        var a = localStorage.getItem("info");
-        a = JSON.parse(a);
-        console.log("Saved name " + a[0].name);
-
-        //console.log("Description: " + response.)
-        //var gameText = $("#game").text(JSON.stringify(response));
-        //console.log(gameText);
-        //$("#game").append(gameText);
-
-        //Setting to Local Storage//
-        localStorage.setItem("info", JSON.stringify(gameResponse));
-        // console.log(gameResponse);
-        // console.log(gameResponse[0].name);
-
->>>>>>> master
         location.href = 'interal_page.html';
     });
 });
