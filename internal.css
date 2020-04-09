@@ -18,6 +18,11 @@ nav {
     border-right: 3px solid #67c0f7 ;
 }
 
+#main-row {
+    background-color: #3c3c3c;
+    padding: 50px;
+}
+
 #main-pic {
     margin-left: 20%; 
     text-align: left; 
@@ -30,33 +35,43 @@ nav {
     font-size: 20px; 
     text-align: left; 
     margin-top: 3rem;
-    font-weight: 400;
+    font-weight: 500;
+    color: #67c0f7;
 }
 
 #description-body {
-    font-size: 14px; 
-    line-height: 20px;
+    font-size: 15px; 
+    line-height: 22px;
     text-align: left; 
+    font-weight: 300;
 }
 
 .related-game {
     margin-bottom: 5rem;
 }
 
-h4 {
+#title {
+    font-weight: 500;
     margin-bottom: 2rem;
-    font-weight: 300;
 }
 
 .game-summary {
     text-align: left;
     margin-top: 0px;
     margin-left: 40px;
-    line-height: 30px;
+    line-height: 22px;
 }
 
 .subtitle {
-    font-weight: 400;
+    margin-top: 1.5rem;
+    font-size: 15px;
+    font-weight: 500;
+    color: #67c0f7;
+}
+
+span {
+    font-weight: 300;
+    color: white;
 }
 
 .btn {
