@@ -1,8 +1,9 @@
 var a=localStorage.getItem("info");
 a = JSON.parse(a);
+console.log(a);
 
 // Game image
-var gameImage = a[0].cover.url;
+var gameImage = "https:"+a[0].cover.url;
 console.log(gameImage);
 var highResImage = gameImage.replace("t_thumb", "t_cover_large");
 console.log(highResImage);

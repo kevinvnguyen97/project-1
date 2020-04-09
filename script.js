@@ -7,8 +7,8 @@ var gameName = "";
 //queryURL = apiURL + key;
 
 $('.btn').on("click", function(event) {
-    //event.preventDefault();
-    gameName = $("#search-input").val().trim();
+    event.preventDefault();
+    gameName = $("#search-input").val();
     
     // Fields
     // id - game ID

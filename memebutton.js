@@ -17,38 +17,48 @@ var memesqueryURL = "http://api.giphy.com/v1/gifs/categories=";
 var gameMemes;
 var cors = "https://cors-anywhere.herokuapp.com/"
 
-$('#meme-btn').on("click", function () {
+$('#meme-btn').on("click", function (event) {
+    event.preventDefault()
     gameMemes = localStorage.getItem("info");
     console.log("This button is being clicked on")
     console.log(gameMemes);
-    gameMemes = JSON.parse(gameMemes); 
+    gameMemes = JSON.parse(gameMemes);
     console.log(gameMemes);
 
     var gameMeme = gameMemes[0].name;
-    var apiKey= "0AiaHLMFWwB2ItqPXky2ZMxPWnWy55HK";
+    var apiKey = "0AiaHLMFWwB2ItqPXky2ZMxPWnWy55HK";
     var newGiphyURL = "http://api.giphy.com/v1/gifs/search?api_key=" + apiKey + "&q=" + gameMeme;
-    console.log(newGiphyURL); 
+    console.log(newGiphyURL);
 
     $.ajax({
         url: cors + newGiphyURL,
-        headers: {
-            "user-key": "0AiaHLMFWwB2ItqPXky2ZMxPWnWy55HK"
-        },
+        // headers: {
+        //     "user-key": "0AiaHLMFWwB2ItqPXky2ZMxPWnWy55HK"
+        // },
         method: "GET"
     }).then(function (response) {
         console.log(response);
-    });
-
-    //accept array with memes 
-   randomMemes function (meme) {
-    for (i=0; i=gameMeme.length; i++){
-        var meme= meme[i]
-        return Math.floor(Math.random() * Math.floor(max));
-    }
+        for (i = 0; i < response.data.length; i++) {
+            if (i !== 11) {
+                // break;
+                // gifURL.append(data[i].url) 
+                var a = $("<img>").attr("src", response.data[i].url)
+                $("#memes").append(a);
+                console.log(response.data[i].url);
+            // } else {
+                // gifURL.append(data[i].url) 
+                // var a = $("<img>").attr("src", response.data[i].url)
+                // $("#memes").append(a);
+                // console.log(response.data[i].url);
+            }
+        };
 });
 
+}); 
 
-        // if button is clicked then display memes by adding a row between button & suggested games 
+//accept array with memes 
+
+    // if button is clicked then display memes by adding a row between button & suggested games 
 
     //     display function(){
     //         if ($('#meme-btn').on("click", function()){
@@ -58,5 +68,4 @@ $('#meme-btn').on("click", function () {
     //             //display error message 
     //         }
     //     });
-    // });
 
