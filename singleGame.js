@@ -1,5 +1,6 @@
 var a=localStorage.getItem("info");
 a = JSON.parse(a);
+console.log(a);
 
 // Game image
 var gameImage = "https:" + a[0].cover.url;
