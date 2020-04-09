@@ -1,4 +1,4 @@
-var a=localStorage.getItem("info");
+var a = localStorage.getItem("info");
 a = JSON.parse(a);
 console.log(a);
 
@@ -72,8 +72,41 @@ var description = a[0].summary;
 $("#description-body").empty();
 $("#description-body").append(description);
 
-//Game Image//
-// var imageCode = a[0].cover
-// var mainImage=$("<img>").attr("src", imageCode);
-// $("#main-pic").empty();
-// $("#main-pic").append(mainImage);
+// //Game Image//
+// // var imageCode = a[0].cover
+// // var mainImage=$("<img>").attr("src", imageCode);
+// // $("#main-pic").empty();
+// // $("#main-pic").append(mainImage);
+
+// //we're creating related games links (names)
+
+// $('.related-game').on("click", function (event) {
+//     event.preventDefault();
+
+//     // Fields
+//     // id - game ID
+//     // name - game name
+//     // cover.url - image of cover
+//     // date - date of release (must convert from timestamp to date using .toDateString())
+//     // game_modes.name - list of game modes
+//     // involved_companies.company.name - names of the companies/developers
+//     // platforms.abbreviation - abbreviated names of platforms
+//     // genres.name - names of genres
+//     // summary - description of game
+
+//     // USE EXPANDER
+//     gameQueryURL = "https://api-v3.igdb.com/games/?search=" + gameName + "&fields=id,name,cover.url,game_modes.name,involved_companies.company.name,platforms.abbreviation,genres.name,summary";
+
+//     $.ajax({
+//         url: cors + gameQueryURL,//cors + queryURL + gameName,
+//         headers: {
+//             "user-key": "0cc1bfecc2736937e59cd1a85bf85210"
+//         },
+//         method: "POST"
+//     }).then(function (gameResponse) {
+//         console.log(gameResponse);
+//         localStorage.setItem("infos", JSON.stringify(gameResponse));
+//     }).catch(function (error) {
+//         console.log(error);
+//     });
+// });
