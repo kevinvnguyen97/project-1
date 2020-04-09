@@ -11,7 +11,7 @@ nav {
 }
 
 #game-image-input {
-    border-right: 3px solid #67c0f7 ;
+    border-right: 3px solid #67c0f7;
 }
 
 #main-row {
@@ -48,7 +48,7 @@ nav {
     padding-bottom: 30px;
     padding-left: 10px;
     padding-right: 10px;
-    /* background-color: #4886ac; */
+    background-color: #5299c5;
 }
 
 .related-game {
@@ -56,6 +56,7 @@ nav {
 }
 
 #title {
+    margin-top: 0px;
     font-weight: 500;
     margin-bottom: 2rem;
 }
