@@ -38,16 +38,16 @@ $('#meme-btn').on("click", function (event) {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        
-        //HIDE OR UNHIDE DIV//
-        var meme = $("#memes");
-        if (meme === "none") {
-            meme.css("display", "block");
-        } else {
-            meme.css("display", "none");
-        }
-        //ENDS HERE//
 
+
+        // var meme = $("#memes");
+        // meme.css("display", "none");
+        // if (meme === "none") {
+        //     meme.css("display", "block");
+        // } else {
+        //     meme.css("display", "none");
+        // }
+        
         for (i = 0; i < response.data.length; i++) {
             if (i >= 11) {
                 // break;
