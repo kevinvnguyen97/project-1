@@ -39,7 +39,6 @@ $('#meme-btn').on("click", function (event) {
     }).then(function (response) {
         console.log(response);
 
-
         // var meme = $("#memes");
         // meme.css("display", "none");
         // if (meme === "none") {
