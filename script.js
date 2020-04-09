@@ -2,6 +2,7 @@ var cors = "https://cors-anywhere.herokuapp.com/";
 var gameQueryURL = "https://api-v3.igdb.com/games/?search=";
 var gameImageURL = "https://images.igdb.com/igdb/image/upload/t_logo_med/";
 var gameName = "";
+//localStorage.clear();
 
 //queryURL = apiURL + key;
 
@@ -28,7 +29,7 @@ $('.btn').on("click", function(event) {
         },
         method: "POST"
     }).then(function(gameResponse) {
-        //console.log(gameResponse);
+        console.log(gameResponse);
         localStorage.setItem("info", JSON.stringify(gameResponse));
         location.href = 'interal_page.html';
     });
