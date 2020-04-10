@@ -8,8 +8,6 @@
 //=========================================================================
 //*If there are no related memes to the game searched 
 //error message with a sad face icon pops up saying "Sorry there are no related memes for this game!"
-
-
 //Meme API & queryURL 
 //api key for Giphy: 0AiaHLMFWwB2ItqPXky2ZMxPWnWy55HK
 var giphy = "https://developers.giphy.com/docs/api";
@@ -38,14 +36,6 @@ $('#meme-btn').on("click", function (event) {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-
-        // var meme = $("#memes");
-        // meme.css("display", "none");
-        // if (meme === "none") {
-        //     meme.css("display", "block");
-        // } else {
-        //     meme.css("display", "none");
-        // }
         
         for (i = 0; i < response.data.length; i++) {
             if (i >= 11) {
@@ -54,6 +44,12 @@ $('#meme-btn').on("click", function (event) {
                 var gifLink = "https://media.giphy.com/media/" + response.data[i].id + "/giphy.gif"
                 var a = $("<img>").attr("src", gifLink)
                 $("#memes").append(a);
+
+                // if ($("#memes") === "none") {
+                //     $("#memes").css("display","block");
+                // } else {
+                //     $("#memes").css("display","none");
+                // }
                 console.log(response.data[i].id);
             // } else {
                 // gifURL.append(data[i].url) 
@@ -65,6 +61,7 @@ $('#meme-btn').on("click", function (event) {
 });
 
 }); 
+  
 
 //accept array with memes 
 
