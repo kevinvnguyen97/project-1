@@ -17,10 +17,9 @@ $("#title").append(title);
 
 // Game Genre
 $("#genre").empty();
-var genres = [];
 for (var i = 0; i < a[0].genres.length; i++) {
-    genres[i] = a[0].genres[i].name;
-    $("#genre").append(genres[i]);
+    var genres = a[0].genres[i].name;
+    $("#genre").append(genres);
     if (i !== a[0].genres.length - 1) {
         $("#genre").append(", ");
     }
@@ -28,10 +27,9 @@ for (var i = 0; i < a[0].genres.length; i++) {
 
 // Game mode
 $("#mode").empty();
-var modes = [];
 for (var i = 0; i < a[0].game_modes.length; i++) {
-    modes[i] = a[0].game_modes[i].name;
-    $("#mode").append(modes[i]);
+    var modes = a[0].game_modes[i].name;
+    $("#mode").append(modes);
     if (i !== a[0].game_modes.length - 1) {
         $("#mode").append(", ");
     }
@@ -44,10 +42,9 @@ $("#year").append(year);
 
 // Game platform
 $("#platform").empty();
-var platformList = [];
 for (var i = 0; i < a[0].platforms.length; i++) {
-    platformList[i] = a[0].platforms[i].abbreviation;
-    $("#platform").append(platformList[i]);
+    platformList = a[0].platforms[i].abbreviation;
+    $("#platform").append(platformList);
     if (i !== a[0].platforms.length - 1) {
         $("#platform").append(", ");
     }
@@ -55,10 +52,9 @@ for (var i = 0; i < a[0].platforms.length; i++) {
 
 // Game developer/company
 $("#developer").empty();
-var developers = [];
 for (var i = 0; i < a[0].involved_companies.length; i++) {
-    developers[i] = a[0].involved_companies[i].company.name;
-    $("#developer").append(developers[i]);
+    developers = a[0].involved_companies[i].company.name;
+    $("#developer").append(developers);
     if (i !== a[0].involved_companies.length - 1) {
         $("#developer").append(", ");
     }
