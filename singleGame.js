@@ -3,12 +3,19 @@ a = JSON.parse(a);
 console.log(a);
 
 // Game image
-var gameImage = "https:" + a[0].cover.url;
-console.log(gameImage);
-var highResImage = gameImage.replace("t_thumb", "t_720p");
-console.log(highResImage);
-$("#main-pic").attr("src", "");
-$("#main-pic").attr("src", highResImage);
+if (a[0].cover.url !== undefined) {
+    var gameImage = "https:" + a[0].cover.url;
+    console.log(gameImage);
+    var highResImage = gameImage.replace("t_thumb", "t_720p");
+    console.log(highResImage);
+    $("#main-pic").attr("src", "");
+    $("#main-pic").attr("src", highResImage);
+}
+
+else {
+    $("main-pic").attr("src", "");
+    $("main-pic").attr("src", "./image-not-available.jpg");
+}
 
 // Game Title
 var title = a[0].name;
