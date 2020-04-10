@@ -8,8 +8,6 @@
 //=========================================================================
 //*If there are no related memes to the game searched 
 //error message with a sad face icon pops up saying "Sorry there are no related memes for this game!"
-
-
 //Meme API & queryURL 
 //api key for Giphy: 0AiaHLMFWwB2ItqPXky2ZMxPWnWy55HK
 var giphy = "https://developers.giphy.com/docs/api";
@@ -38,6 +36,7 @@ $('#meme-btn').on("click", function (event) {
         method: "GET"
     }).then(function (response) {
         console.log(response);
+        $("#memes").empty();
         for (i = 0; i < response.data.length; i++) {
             if (i >= 11) {
                 // break;
@@ -53,9 +52,11 @@ $('#meme-btn').on("click", function (event) {
                 // console.log(response.data[i].url);
             }
         };
+        $("#memes").toggle();
 });
 
 }); 
+  
 
 //accept array with memes 
 
