@@ -23,7 +23,7 @@ for (var i = 0; i < a.length; i++) {
     $("#related-game-image-input" + (i + 1)).on("click", function (event) {
         event.preventDefault();
         $("#memes").hide();
-        window.scrollTo(0, 0);
+        $("html, body").animate({scrollTop: "0"});
         var gameObj = JSON.parse($(this).attr("gameobj"));
 
         // Game image
