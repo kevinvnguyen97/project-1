@@ -36,7 +36,7 @@ $('#meme-btn').on("click", function (event) {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        
+        $("#memes").empty();
         for (i = 0; i < response.data.length; i++) {
             if (i >= 11) {
                 // break;
@@ -44,12 +44,6 @@ $('#meme-btn').on("click", function (event) {
                 var gifLink = "https://media.giphy.com/media/" + response.data[i].id + "/giphy.gif"
                 var a = $("<img>").attr("src", gifLink)
                 $("#memes").append(a);
-
-                // if ($("#memes") === "none") {
-                //     $("#memes").css("display","block");
-                // } else {
-                //     $("#memes").css("display","none");
-                // }
                 console.log(response.data[i].id);
             // } else {
                 // gifURL.append(data[i].url) 
@@ -58,6 +52,7 @@ $('#meme-btn').on("click", function (event) {
                 // console.log(response.data[i].url);
             }
         };
+        $("#memes").toggle();
 });
 
 }); 
