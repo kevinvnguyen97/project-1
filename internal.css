@@ -134,3 +134,18 @@ span {
         margin-left: 5px;
     }
 }
+
+@media only screen and (max-width: 800px) {
+    #game-image-input {
+        padding-bottom: 3rem;
+        border-right: none;
+        border-bottom: 3px solid #67c0f7;
+    }
+    .game-summary {
+        margin-left: 4px;
+    }
+    #title {
+        margin-top: 2rem;
+    }
+}
+
