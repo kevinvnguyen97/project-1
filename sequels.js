@@ -12,7 +12,7 @@ for (var i = 0; i < a.length; i++) {
     }
 
     else {
-        $("#related-game-image-input" + (i + 1)).attr("src", "./image-not-available.jpg");
+        $("#related-game-image-input" + (i + 1)).attr("src", "./image-not-available.png");
         console.log('i: ' + i + ', image not available');
     }
 
@@ -37,7 +37,7 @@ for (var i = 0; i < a.length; i++) {
         }
         else {
             $("#main-pic").attr("src", "");
-            $("#main-pic").attr("src", "./image-not-available.jpg");
+            $("#main-pic").attr("src", "./image-not-available.png");
         }
 
         // Game title
