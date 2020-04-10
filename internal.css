@@ -1,5 +1,6 @@
 body {
-    background-color: #4b4c4c;
+    /* background-color: #4b4c4c; */
+    background-color: #1c1c1c;
     color: white;
     font-family: 'Barlow', sans-serif;
 }
@@ -10,66 +11,42 @@ nav {
     background-color: #303030;
 }
 
-#game-image-input {
-    border-right: 3px solid #67c0f7 ;
-}
+/* MAIN SECTION  */
 
 #main-row {
-    background-color: #3c3c3c;
+    background-color: #1c1c1c;
     padding: 50px;
     margin-bottom: 0px !important;
 }
 
+#game-image-input {
+    border-right: 3px solid #67c0f7;
+}
+
 #main-pic {
-    margin-left: 20%; 
-    text-align: left; 
+    margin-left: 20%;
+    text-align: left;
     margin-left: 0px;
-    width: 100%;  
-    padding-right: 40px; 
-} 
-
-.section-title {
-    margin-top: 0px;
-    font-size: 20px; 
-    text-align: left; 
-    font-weight: 500;
-    color: white;
-}
-
-#description-body {
-    font-size: 15px; 
-    line-height: 22px;
-    text-align: left; 
-    font-weight: 300;
-}
-
-#description-input {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    /* background-color: #4886ac; */
-}
-
-.related-game {
-    margin-bottom: 5rem;
-}
-
-#title {
-    font-weight: 500;
-    margin-bottom: 2rem;
+    width: 100%;
+    padding-right: 40px;
 }
 
 .game-summary {
     text-align: left;
     margin-top: 0px;
     margin-left: 40px;
-    line-height: 22px;
+    line-height: 23px;
+}
+
+#title {
+    margin-top: 0px;
+    font-weight: 500;
+    margin-bottom: 2rem;
 }
 
 .subtitle {
     margin-top: 1.5rem;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     color: #67c0f7;
 }
@@ -79,9 +56,52 @@ span {
     color: white;
 }
 
+
+/* DESCRIPTION */
+
+#description-input {
+    padding-bottom: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #5299c5;
+}
+
+.section-title {
+    margin-top: 0px;
+    padding-top: 40px;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 500;
+    color: white;
+}
+
+#description-body {
+    font-size: 16px;
+    line-height: 23px;
+    text-align: left;
+    font-weight: 300;
+}
+
+
+/* SEQUEL */
+
+.related-game {
+    margin-bottom: 3rem;
+}
+
+
+/* MEME SECTION */
+
+#meme-section {
+    text-align: center;
+    background-color: #303030;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+
 .btn {
     background-color: #67c0f7;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-weight: 500;
 }
 
@@ -89,18 +109,28 @@ span {
     background-color: #3498d6;
 }
 
+
 /* Mobile Responsive */
 
 @media only screen and (max-width: 600px) {
+    #title {
+        margin-top: 2rem;
+    }
+
+    #main-row {
+        background-color: #1c1c1c;
+        padding: 20px;
+    }
+
     #game-image-input {
         border: none;
     }
 
-    #main-pic { 
-        padding-right: 0px; 
+    #main-pic {
+        padding-right: 0px;
     }
 
     .game-summary {
         margin-left: 5px;
-    }   
+    }
 }
