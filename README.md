@@ -1,6 +1,4 @@
-# project-1
-
-# Stat Quest 
+# Project 1: Stat Quest
 
 Stat Quest is an application built for passionate gamers seeking to connect with the sequels and memes associated with their favorite game. Simply search up a favorite game and Stat Quest will direct the user to  statistics including: genre, mode, year, platform and developers. Below the statistics, a menu will display if the searched game has any sequels. For extra fun, the user can click a button to access related gif memes. 
 
